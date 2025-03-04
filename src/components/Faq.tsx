@@ -3,7 +3,6 @@ import AddIcon from '../assets/add-ico.png'
 import MinIcon from '../assets/min-ico.png'
 const Faq = () => {
     const [openFaq, setOpenFaq] = useState<number | null>(null);
-    const [gradientPosition, setGradientPosition] = useState("30% 40%");
 
     useEffect(() => {
       const updateGradientPosition = () => {
