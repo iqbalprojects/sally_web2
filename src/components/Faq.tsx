@@ -6,11 +6,7 @@ const Faq = () => {
 
     useEffect(() => {
       const updateGradientPosition = () => {
-        if (window.innerWidth < 768) {
-          setGradientPosition("10% 40%"); // Small screens
-        } else {
-          setGradientPosition("30% 40%"); // Default for larger screens
-        }
+      
       };
   
       updateGradientPosition(); // Run on mount
