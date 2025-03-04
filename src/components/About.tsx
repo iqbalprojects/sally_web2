@@ -9,6 +9,13 @@ import Base from "../assets/base.png";
 const About = () => {
     return (
         <div id="2" className="py-[120px] px-[16px] bg-about lg:bg-aboutTablet bg-cover bg-center relative flex justify-center md:px-[40px] md:py-[120px]">
+         <div
+                className="absolute top-0 left-0 h-[564px] w-full"
+                style={{
+                    backgroundImage:
+                        "linear-gradient(360deg, rgba(1, 2, 1, 0) 0%, #010201 100%)",
+                }}
+            ></div>
             <div
                 className="absolute bottom-0 left-0 h-[564px] w-full"
                 style={{
