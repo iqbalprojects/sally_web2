@@ -93,7 +93,7 @@ const Banner = () => {
   );
     return (
       <div
-      id='banner'
+      id='6'
       className="relative w-full min-h-[800px] lg:min-h-[700px] md:min-h-[900px] flex flex-col py-[80px] px-[16px] md:px-[40px] md:py-0 bg-black">
 
   {/* Background layers for different screens */}
