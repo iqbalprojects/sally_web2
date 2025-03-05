@@ -106,11 +106,11 @@ const About = () => {
                         </p>
                         <div className="flex items-center gap-x-5">
                             <img src={Social1} width={24} height={24} alt="" />
-                            <img src={Garuda} width={24} height={24} alt="" />
-                            <img src={Dino} width={24} height={24} alt="" />
-                            <img src={X} width={24} height={24} alt="" />
+                            <a href="https://dexscreener.com/base/0x7dc3662f4c2c41c5752652e8b417a9024c2b1f63" target="_blank"><img src={Garuda} width={24} height={24} alt="" /></a>
+                            <a href="https://www.coingecko.com/en/coins/sally-a1c" target="_blank"><img src={Dino} width={24} height={24} alt="" /></a>
+                            <a href="https://x.com/Sally_A1c" target="_blank"><img src={X} width={24} height={24} alt="" /></a>
                             <img src={Discord} width={24} height={24} alt="" />
-                            <img src={Telegram} width={24} height={24} alt="" />
+                            <a href="https://t.me/sallya1c" target="_blank"><img src={Telegram} width={24} height={24} alt="" /></a>
                         </div>
                     </div>
                 </div>

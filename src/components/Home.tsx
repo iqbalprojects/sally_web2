@@ -50,15 +50,17 @@ const Home = () => {
           )}
         </div>
         <div className="flex w-1/2 justify-end gap-[10px] min-h-[38px]">
-          <img
-            src={Wallet}
-            className="w-[38px] h-[38px] hidden md:block"
-          />
-            <div className="min-w-[100px] h-[38px] rounded-md border-2 border-white/30 flex items-center justify-center bg-[#287CF1]">
+          <a href="#banner">
+            <img
+              src={Wallet}
+              className="w-[38px] h-[38px] hidden md:block"
+            />
+          </a>
+            <a href="#banner" className="min-w-[100px] h-[38px] rounded-md border-2 border-white/30 flex items-center justify-center bg-[#287CF1]">
             <h1 className="font-manrope font-bold text-base text-white">
               Buy $A1C
             </h1>
-          </div>
+          </a>
         </div>
       </div>
 
@@ -75,13 +77,14 @@ const Home = () => {
         </div>
         <div className="w-full min-h-[124px] md:min-h-[56px] flex justify-center flex-col md:flex-row space-y-2.5 md:gap-[32px]">
           <a
-            href="#"
+            href="#banner"
             className="mt-3 md:w-[177px] md:h-[56px] font-manrope font-bold text-base leading-[22px] flex w-full min-h-[56px] rounded-[10px] border-2 py-[17px] px-[24px] md:px-[20px] items-center justify-center bg-white text-black"
           >
             Get Early Access
           </a>
           <a
-            href="#"
+            href="https://sallya1c.gitbook.io/docs"
+            target="_blank"
             className="space-x-2.5 md:h-[56px] border-white flex w-full min-h-[56px] md:w-[164px] rounded-[10px] border-1 py-[16px] px-[24px] items-center justify-center md:px-[20px]"
           >
             <span className="font-manrope font-bold text-base leading-[22px]">
