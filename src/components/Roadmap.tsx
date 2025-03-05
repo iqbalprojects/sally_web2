@@ -12,7 +12,7 @@ const Roadmap = () => {
                 
                 <div className="relative grid grid-cols-1 space-y-[40px] md:grid-cols-2 md:gap-x-[20px] md:gap-y-[20px] md:pr-[20px]">
                     {/* First card - left side */}
-                    <div className="flex justify-end lg:mr-[15px]">
+                    <div data-aos="fade-right" data-aos-duration="1000" className="flex justify-end lg:mr-[15px]">
                     <div className="bg-[#30303080] w-full h-[238px] p-[20px] rounded-[12px] border flex flex-col space-y-[12px]  lg:w-[516px] lg:min-h-[288px]">
                         <h1 className="font-manrope font-bold text-[20px] leading-[27.32px] text-[#287CF1]">2024</h1>
                         <h1 className="font-manrope font-extrabold text-[20px] leading-[27.32px] bg-gradient-to-r from-[#287CF1] via-white to-[#FFFFFF] bg-clip-text text-transparent">Core Features Development</h1>
@@ -33,7 +33,7 @@ const Roadmap = () => {
                     <div className="hidden md:block"></div>
                     
                     <div className="hidden md:block"></div>
-                    <div className="flex justify-start  md:ml-[15px]">
+                    <div data-aos="fade-left" data-aos-duration="1000" className="flex justify-start  md:ml-[15px]">
                     <div className="bg-[#30303080] w-full h-[238px] p-[20px] rounded-[12px] border flex flex-col space-y-[12px] md:col-start-2 md:row-start-2 md:ml-[20px] lg:w-[516px] lg:min-h-[288px]">
                         <h1 className="font-manrope font-bold text-[20px] leading-[27.32px] text-[#287CF1]">2024</h1>
                         <h1 className="font-manrope font-extrabold text-[20px] leading-[27.32px] bg-gradient-to-r from-[#287CF1] via-white to-[#FFFFFF] bg-clip-text text-transparent">Security Measures</h1>

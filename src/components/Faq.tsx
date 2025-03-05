@@ -58,8 +58,8 @@ const Faq = () => {
             <h1 className="font-bold font-manrope text-[34px] leading-[46.44px] text-center md:text-[42px] lg:text-[56px] md:leading-[1.2] lg:leading-[76.5px]">Questions</h1>
           </div>
           <div className="w-full flex flex-col justify-center items-center  space-y-[24px] md:px-[5%] lg:px-[90px]">
-            {faqItems.map((item) => (
-              <div key={item.id} className="w-full md:w-[574px] lg:w-[772px] rounded-[12px] border border-white/10 overflow-hidden bg-white/5">
+            {faqItems.map((item, idx) => (
+              <div data-aos={idx % 2 === 0 ? "fade-right" : "fade-left"} data-aos-duration="1000" key={item.id} className="w-full md:w-[574px] lg:w-[772px] rounded-[12px] border border-white/10 overflow-hidden bg-white/5">
                 <div 
                   className="w-full min-h-[67px] p-[20px] flex justify-between items-center cursor-pointer"
                   onClick={() => toggleFaq(item.id)}

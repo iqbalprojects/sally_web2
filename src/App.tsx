@@ -13,34 +13,53 @@ import "aos/dist/aos.css"
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [activeLink, setActiveLink] = useState<number | null>(null)
-
     // Initialize AOS
     useEffect(() => {
       AOS.init({
         duration: 1000, // Animation duration
-        once: false,
-        easing: "ease-in-out" 
+        once: false, // Whether the animation should happen only once
       });
     }, []);
 
-    const handleLinkClick = (id: number) => {
-      setActiveLink(id); // Update the active link
-      const target = document.getElementById(id.toString());
-      if (target) {
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
+    useEffect(() => {
+      const handleClickOutside = (event: MouseEvent) => {
+        const sidebar = document.querySelector(".sidebar");
+        if (
+          isSidebarOpen &&
+          sidebar &&
+          !sidebar.contains(event.target as Node)
+        ) {
+          setIsSidebarOpen(false); // Close the sidebar
+        }
+      };
+  
+      if (isSidebarOpen) {
+        document.addEventListener("mousedown", handleClickOutside);
       }
-    };
+  
+      // Cleanup the event listener when the sidebar is closed or the component unmounts
+      return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, [isSidebarOpen]);
+  const handleLinkClick = (id: number) => {
+    setActiveLink(id); // Update the active link
+    const target = document.getElementById(id.toString());
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
   
     return (
       <div className="font-manrope">
-          <div
-        className={`fixed top-0 left-0 w-[219px] h-full bg-black z-50 transform transition-transform duration-300 ${
+         <div
+        className={`sidebar fixed top-0 left-0 w-1/2 h-full bg-black z-50 transform transition-transform duration-300 ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         } lg:hidden`}
       >
-        <div className="h-[56px] px-[16px] py-[9px]">
+        <div className="h-[56px] px-[16px] py-[9px] flex items-center">
           <button
-              className="self-end text-white"
+              className="self-end text-white h-full py-2"
               onClick={() => setIsSidebarOpen(false)} // Close sidebar
             >
               <svg
@@ -82,25 +101,25 @@ function App() {
             e.preventDefault();
             handleLinkClick(6);
 
-          }} className="text-center w-full max-h-[38px] font-manrope font-bold text-base leading-[21.86px] bg-[#287CF1] border-2 border-white/30 rounded-[6px] px-[14px] py-[8px]">
+          }} className="text-center w-full max-h-[38px] font-manrope font-bold text-base leading-[21.86px] bg-[#287CF1] border-2 rounded-[6px] px-[14px] py-[8px]">
           Buy $A1C
           </a>
         </div>
       </div>
-        <Wrapper>
-              <Home setIsSidebarOpen={setIsSidebarOpen}/>
-          <div className="bg-gradient-to-b from-black via-[#1a1a1a] to-black">
-              <Wrapper>
-                <About />
-                <Feature />
-                <Specialties />
-                <Experience />
-                <Roadmap />
-                <Faq />
-                <Banner />
-              </Wrapper>
-          </div>
+        <Wrapper animation="fade-up">
+              <Home setIsSidebarOpen={setIsSidebarOpen} />
         </Wrapper>
+          <div className="bg-gradient-to-b from-black via-[#1a1a1a] to-black overflow-hidden">
+          
+              <About />
+              <Feature />
+              <Specialties />
+              <Experience />
+              <Roadmap />
+              <Faq />
+              <Banner />
+          </div>
+       
       </div>
     );
   }

@@ -26,8 +26,8 @@ const Feature = () => {
                 {/* Feature Cards */}
                 <div className="grid grid-cols-1 bg-radial lg:bg-radialDesktop md:grid-cols-2 lg:grid-cols-6 lg:grid-rows-2 gap-[24px] h-auto pt-16 pb-[120px]">
                     {/* Top Row - First Two Items Stretched */}
-                    <div className="backdrop-blur-3xl w-full max-h-[237px] p-[24px] space-y-[24px] border-[1.5px] border-gray-700 rounded-[12px] md:col-span-2 lg:col-span-3 lg:row-span-1 bg-white/5">
-                        <img
+                    <div data-aos='fade-right' data-aos-duration="1000" className="backdrop-blur-3xl w-full max-h-[237px] p-[24px] space-y-[24px] border-[1.5px] border-gray-700 rounded-[12px] md:col-span-2 lg:col-span-3 lg:row-span-1 bg-white/5">
+                    <img
                             src={HeartIcon}
                             alt="Heart Icon"
                             className="w-[56px] h-[56px]"
@@ -45,7 +45,7 @@ const Feature = () => {
                         </div>
                     </div>
 
-                    <div className="backdrop-blur-3xl w-full max-h-[237px] p-[24px] space-y-[24px] border-[1.5px] border-gray-700 rounded-[12px] lg:col-span-3 lg:row-span-1 bg-white/5">
+                    <div data-aos='fade-left' data-aos-duration="1000" className="backdrop-blur-3xl w-full max-h-[237px] p-[24px] space-y-[24px] border-[1.5px] border-gray-700 rounded-[12px] lg:col-span-3 lg:row-span-1 bg-white/5">
                         <img
                             src={DiamondIcon}
                             alt="Diamond Icon"
@@ -65,7 +65,7 @@ const Feature = () => {
                     </div>
 
                     {/* Bottom Row - Rest of the Items */}
-                    <div className="backdrop-blur-3xl w-full max-h-[237px] p-[24px] space-y-[24px] border-[1.5px] border-gray-700 rounded-[12px] lg:col-span-2 lg:row-start-2 bg-white/5">
+                    <div data-aos='fade-right' data-aos-duration="1000" className="backdrop-blur-3xl w-full max-h-[237px] p-[24px] space-y-[24px] border-[1.5px] border-gray-700 rounded-[12px] lg:col-span-2 lg:row-start-2 bg-white/5">
                         <img
                             src={NoteIcon}
                             alt="Note Icon"
@@ -82,7 +82,7 @@ const Feature = () => {
                         </div>
                     </div>
 
-                    <div className="backdrop-blur-3xl w-full max-h-[237px] p-[24px] space-y-[24px] border-[1.5px] border-gray-700 rounded-[12px] lg:col-span-2 lg:row-start-2 bg-white/5">
+                    <div data-aos='fade-down' data-aos-duration="1000" className="backdrop-blur-3xl w-full max-h-[237px] p-[24px] space-y-[24px] border-[1.5px] border-gray-700 rounded-[12px] lg:col-span-2 lg:row-start-2 bg-white/5">
                         <img
                             src={MedicineIcon}
                             alt="Medicine Icon"
@@ -99,7 +99,7 @@ const Feature = () => {
                         </div>
                     </div>
 
-                    <div className="backdrop-blur-3xl w-full max-h-[237px] p-[24px] space-y-[24px] border-[1.5px] border-gray-700 rounded-[12px] lg:col-span-2 lg:row-start-2 bg-white/5">
+                    <div data-aos='fade-left' data-aos-duration="1000" className="backdrop-blur-3xl w-full max-h-[237px] p-[24px] space-y-[24px] border-[1.5px] border-gray-700 rounded-[12px] lg:col-span-2 lg:row-start-2 bg-white/5">
                         <img
                             src={HealthInsuranceIcon}
                             alt="Health Insurance Icon"

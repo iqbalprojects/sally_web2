@@ -38,9 +38,7 @@ const Banner = () => {
         }
       );
 
-      if (response.status === 200) {
-        console.log('mantap');
-        
+      if (response.status === 200) {        
         setStatusMessage({ type: 'success', message: 'Email sent successfully' });
       } else if (response.status === 422) {
         setStatusMessage({ type: 'error', message: 'The email must be a valid email address' });
@@ -93,6 +91,8 @@ const Banner = () => {
   );
     return (
       <div
+      data-aos="fade-up"
+      data-aos-duration="1000"
       id='6'
       className="relative w-full min-h-[800px] lg:min-h-[700px] md:min-h-[900px] flex flex-col py-[80px] px-[16px] md:px-[40px] md:py-0 bg-black">
 
@@ -137,7 +137,7 @@ const Banner = () => {
             className="z-50 w-full flex flex-col md:flex-row md:space-x-[16px] md:space-y-0 space-y-[16px] justify-center"
           >
             <input 
-              className="w-full text-base md:max-w-[372px] px-[24px] py-[13px] min-h-[48px] rounded-[10px] font-manrope  font-normal leading-[20px] text-[#FFFFFF] bg-white/10" 
+              className="w-full md:max-w-[372px] px-[24px] py-[13px] min-h-[48px] rounded-[10px] font-manrope text-[14px] font-normal leading-[20px] text-[#FFFFFF] bg-white/10" 
               type="email"
               name="form_fields[email]"
               id="form-field-email"

@@ -24,7 +24,7 @@ const Specialties = () => {
         </div>
 
         <div className="relative max-h-[1472px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 space-y-[24px] md:space-y-0 gap-[24px]">
-          <div className="w-full max-h-[350px] rounded-[12px] border border-white/10 p-[32px] space-y-[20px] flex flex-col items-center bg-white/5">
+          <div data-aos="fade-right" data-aos-duration="1000" className="w-full max-h-[350px] rounded-[12px] border border-white/10 p-[32px] space-y-[20px] flex flex-col items-center bg-white/5">
             <div className="p-12 flex justify-center">
               <img
                 src={SettingsIcon}
@@ -43,7 +43,7 @@ const Specialties = () => {
             </div>
           </div>
 
-          <div className="w-full max-h-[350px] rounded-[12px] border border-white/10 p-[32px] space-y-[20px] flex flex-col items-center bg-white/5">
+          <div data-aos="fade-left" data-aos-duration="1000" className="w-full max-h-[350px] rounded-[12px] border border-white/10 p-[32px] space-y-[20px] flex flex-col items-center bg-white/5">
             <div className="p-12 flex justify-center">
               <img
                 src={DistributeIcon}
@@ -62,7 +62,7 @@ const Specialties = () => {
             </div>
           </div>
 
-          <div className="w-full max-h-[350px] rounded-[12px] border border-white/10 p-[32px] space-y-[20px] flex flex-col items-center bg-white/5">
+          <div data-aos="fade-right" data-aos-duration="1000" className="w-full max-h-[350px] rounded-[12px] border border-white/10 p-[32px] space-y-[20px] flex flex-col items-center bg-white/5">
             <div className="p-12 flex justify-center">
               <img
                 src={StartupIcon}
@@ -81,7 +81,7 @@ const Specialties = () => {
             </div>
           </div>
 
-          <div className="w-full max-h-[350px] rounded-[12px] border border-white/10 p-[32px] space-y-[20px] flex flex-col items-center bg-white/5">
+          <div data-aos="fade-left" data-aos-duration="1000" className="w-full max-h-[350px] rounded-[12px] border border-white/10 p-[32px] space-y-[20px] flex flex-col items-center bg-white/5">
             <div className="p-12 flex justify-center">
               <img
                 src={SystemIntegrationIcon}
