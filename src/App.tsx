@@ -15,7 +15,8 @@ function App() {
     useEffect(() => {
       AOS.init({
         duration: 1000, // Animation duration
-        once: true, // Whether the animation should happen only once
+        once: false,
+        easing: "ease-in-out" 
       });
     }, []);
   
@@ -24,13 +25,15 @@ function App() {
         <Wrapper>
               <Home />
           <div className="bg-gradient-to-b from-black via-[#1a1a1a] to-black">
-              <About />
-              <Feature />
-              <Specialties />
-              <Experience />
-              <Roadmap />
-              <Faq />
-              <Banner />
+              <Wrapper>
+                <About />
+                <Feature />
+                <Specialties />
+                <Experience />
+                <Roadmap />
+                <Faq />
+                <Banner />
+              </Wrapper>
           </div>
         </Wrapper>
       </div>
