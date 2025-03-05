@@ -82,7 +82,7 @@ function App() {
             e.preventDefault();
             handleLinkClick(6);
 
-          }} className="text-center w-full max-h-[38px] font-manrope font-bold text-base leading-[21.86px] bg-[#287CF1] border-2 rounded-[6px] px-[14px] py-[8px]">
+          }} className="text-center w-full max-h-[38px] font-manrope font-bold text-base leading-[21.86px] bg-[#287CF1] border-2 border-white/30 rounded-[6px] px-[14px] py-[8px]">
           Buy $A1C
           </a>
         </div>
