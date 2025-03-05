@@ -14,11 +14,17 @@ const Home = () => {
 
   // Function to handle link clicks
   const handleLinkClick = (id: number) => {
-    setActiveLink(id); // Update the active link
-    const target = document.getElementById(id.toString());
-    if (target) {
+    if (id === 6) {
+      window.open("https://creator.bid/agents/678648cdba2b8db95be3f5bb", "_blank");
+      return;
+  }
+
+  setActiveLink(id);
+
+  const target = document.getElementById(id.toString());
+  if (target) {
       target.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+  }
   };
 
   return (
@@ -42,10 +48,10 @@ const Home = () => {
           (link, index) => (
             <a
               key={index}
-              href={`${index === 5 ? 'https://sallya1c.gitbook.io/docs' : `#${index + 1}`}`}
+              href={`#${index + 1}`}
               onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
-              e.preventDefault();
-              handleLinkClick(index + 1)
+                e.preventDefault();
+                  handleLinkClick(index + 1);
               }}
               className={`font-manrope font-semibold text-[16px] leading-[21.86px] ${
               activeLink === index + 1 ? "" : "opacity-[30%]"
@@ -111,7 +117,7 @@ const Home = () => {
         </a>
       </div>
     </div>
-    <div className="absolute -bottom-32 md:-bottom-20 lg:-bottom-20 left-0 -translate-x-0 mx-auto w-full flex justify-center">
+    <div className="z-10 absolute md:-bottom-20 left-0 -translate-x-0 mx-auto w-full flex justify-center">
       <img
         src={Hero}
         width={375}
