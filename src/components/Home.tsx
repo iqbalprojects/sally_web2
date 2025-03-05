@@ -8,7 +8,7 @@ import HeroDesktop from '../assets/sally-lg.png'
 
 import { useState } from "react";
 
-const Home = () => {
+const Home = ({setIsSidebarOpen}: {setIsSidebarOpen: (v: boolean) => void} ) => {
   // State to track the active link
   const [activeLink, setActiveLink] = useState<number | null>(null);
 
@@ -34,34 +34,37 @@ const Home = () => {
     style={{ backgroundImage: `url(${backgroundImage})` }}
   >
     <div className="min-w-[375px] h-[56px] flex justify-between px-[16px] py-[9px] md:px-[40px] md:py-[26px]">
-      <div className="flex w-1/2 gap-2 min-h-[38px]">
-        <div className="p-[6px] lg:hidden">
-          <img src={Burger} className="w-[24px] h-[24px]" />
+    <div className="flex w-1/2 gap-2 min-h-[38px]">
+          {/* Burger Icon for Sidebar */}
+          <div
+            className="p-[6px] lg:hidden cursor-pointer"
+            onClick={() => setIsSidebarOpen(true)} // Toggle sidebar
+          >
+            <img src={Burger} className="w-[24px] h-[24px]" alt="Menu" />
+          </div>
+          <h1 className="font-manrope font-extrabold text-2xl w-[101px] h-[33px]">
+            AskSally
+          </h1>
         </div>
-        <h1 className="font-manrope font-extrabold text-2xl w-[101px] h-[33px]">
-          AskSally
-        </h1>
-      </div>
       <div className="hidden lg:flex min-h-[48px] rounded-[70px] border bg-[#17171766] space-x-[24px] px-[32px] py-[13px]">
-        {/* Links */}
-        {["Home", "About", "Specialist", "Experience", "Roadmap", "Docs"].map(
-          (link, index) => (
-            <a
-              key={index}
-              href={`#${index + 1}`}
-              onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
-                e.preventDefault();
+          {["Home", "About", "Specialist", "Experience", "Roadmap", "Docs"].map(
+            (link, index) => (
+              <a
+                key={index}
+                href={`#${index + 1}`}
+                onClick={(e) => {
+                  e.preventDefault();
                   handleLinkClick(index + 1);
-              }}
-              className={`font-manrope font-semibold text-[16px] leading-[21.86px] ${
-              activeLink === index + 1 ? "" : "opacity-[30%]"
-              }`}
-            >
-              {link}
-            </a>
-          )
-        )}
-      </div>
+                }}
+                className={`font-manrope font-semibold text-[16px] leading-[21.86px] ${
+                  activeLink === index + 1 ? "" : "opacity-[30%]"
+                }`}
+              >
+                {link}
+              </a>
+            )
+          )}
+        </div>
       <div className="flex w-1/2 justify-end gap-[10px] min-h-[38px]">
         <button onClick={(e) => {
                 e.preventDefault();
