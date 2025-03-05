@@ -59,11 +59,10 @@ const Experience = () => {
                 <div className='absolute bottom-0 left-1/2 md:scale-[1.8] transform -translate-x-1/2 translate-y-[5%] w-[263px] h-auto border-2 border-white rounded-[20px] overflow-hidden'>
                     <video 
                         className='w-full h-auto object-cover' 
-                        autoPlay 
-                        loop 
-                        muted 
-                        src={video}
-                    ></video>
+                        playsInline autoPlay loop muted
+                    >
+                        <source src={video} type="video/mp4" />
+                    </video>
                 </div>
         </div>
       </div>

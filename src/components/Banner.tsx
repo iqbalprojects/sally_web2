@@ -137,7 +137,7 @@ const Banner = () => {
             className="z-50 w-full flex flex-col md:flex-row md:space-x-[16px] md:space-y-0 space-y-[16px] justify-center"
           >
             <input 
-              className="w-full md:max-w-[372px] px-[24px] py-[13px] min-h-[48px] rounded-[10px] font-manrope text-[14px] font-normal leading-[20px] text-[#FFFFFF] bg-white/10" 
+              className="w-full text-base md:max-w-[372px] px-[24px] py-[13px] min-h-[48px] rounded-[10px] font-manrope  font-normal leading-[20px] text-[#FFFFFF] bg-white/10" 
               type="email"
               name="form_fields[email]"
               id="form-field-email"
@@ -170,10 +170,10 @@ const Banner = () => {
     </h1>
     <div className="flex items-center justify-center space-x-[24px] max-w-[262px] min-h-[48px] rounded-[70px] border border-white/20 bg-black/80 py-[12px] px-[24px]">
       <img src={Sosmed1} alt="Telegram" className="w-[22px] h-[22px]" />
-      <img src={GarudaIcon} alt="Garuda" className="w-[22px] h-[22px]" />
-      <img src={DinoIcon} alt="Dino" className="w-[22px] h-[22px]" />
-      <img src={XIcon} alt="Twitter X" className="w-[22px] h-[22px]" />
-      <img src={TeleIcon} alt="Telegram" className="w-[22px] h-[22px]" />
+      <a href="https://dexscreener.com/base/0x7dc3662f4c2c41c5752652e8b417a9024c2b1f63" target="_blank"><img src={GarudaIcon} alt="Garuda" className="w-[22px] h-[22px]" /></a>
+      <a href="https://www.coingecko.com/en/coins/sally-a1c" target="_blank"><img src={DinoIcon} alt="Dino" className="w-[22px] h-[22px]" /></a>
+      <a href="https://x.com/Sally_A1c" target="_blank"><img src={XIcon} alt="Twitter X" className="w-[22px] h-[22px]" /></a>
+      <a  href="https://t.me/sallya1c" target="_blank"><img src={TeleIcon} alt="Telegram" className="w-[22px] h-[22px]" /></a>
     </div>
   </div>
 </div>
