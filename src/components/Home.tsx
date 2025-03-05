@@ -42,13 +42,13 @@ const Home = () => {
           (link, index) => (
             <a
               key={index}
-              href={`#${index + 1}`}
-              onClick={(e) => {
-                e.preventDefault();
-                handleLinkClick(index + 1)
+              href={`${index === 5 ? 'https://sallya1c.gitbook.io/docs' : `#${index + 1}`}`}
+              onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+              e.preventDefault();
+              handleLinkClick(index + 1)
               }}
               className={`font-manrope font-semibold text-[16px] leading-[21.86px] ${
-                activeLink === index + 1 ? "" : "opacity-[30%]"
+              activeLink === index + 1 ? "" : "opacity-[30%]"
               }`}
             >
               {link}
